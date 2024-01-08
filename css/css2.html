@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #demo{
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            padding: 10px;
+            margin: 10px;  
+        }
+
+        #overflow{
+            width: 250px;
+            height: 250px;
+            border: 2px solid black;
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            /* overflow: auto; */
+            /* overflow: visible; */
+            overflow-x: hidden;
+        }
+
+        #borderRadius{
+            width: 250px;
+            height: 250px;
+            border: 2px solid black;
+            /* border-top-right-radius: 100px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px; */
+            border-radius: 10px 100px 12px 12px / 10px 100px 12px 12px;
+        }
+
+        #box-shadow{
+            margin: 40px;
+            width: 250px;
+            height: 250px;
+            border: 1px solid black;
+            box-shadow: 2px 2px 10px 15px #ffa500,4px 4px 10px 20px green,8px 4px 10px 25px blueviolet;
+            background: #ffa600b2;
+            border-radius: 50%;
+        }
+        #float1{
+            width: 500px; 
+            border: 4px dashed black;
+            float: left;
+            margin-right: 10px;
+        }
+        #float2{
+            width: 700px; 
+            border: 4px dashed red;
+            /* float: right; */
+            float: left; 
+        }
+ 
+        #box1{
+            width: 400px;
+            background: pink;
+            border: 2px solid black;
+            line-height: 30px;
+            float: left;
+        }
+        #box2{
+            width: 400px; 
+            border: 2px solid green;
+            float: right;
+        }
+        #box3{ 
+            /* width: 100%; */
+            background: gold;
+            border: 2px solid red;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="demo">100Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, maxime optio. Molestiae labore nobis facilis neque ut cumque aspernatur eum? Rerum, et eveniet exercitationem tempore sapiente in perspiciatis quisquam placeat laborum dolor repellat laboriosam porro minus maiores nostrum nobis nihil? Quo minus quod voluptatum alias obcaecati enim quia nam iste provident, ut, pariatur adipisci neque sequi aspernatur veritatis. Dolore consequatur quisquam harum tempore facere praesentium nihil repellat animi placeat quos, illo iure doloremque maxime molestiae impedit fugit blanditiis qui aperiam. Iste quas ut corrupti ipsa animi possimus pariatur quasi optio. Voluptatum ipsa odio harum, quasi in velit asperiores porro officiis. ipsum dolor sit amet consectetur adipisicing elit. Recusandae veniam, minima quaerat pariatur doloribus, numquam autem sit vel debitis harum repellendus voluptates ipsam explicabo totam! Ut sunt sint esse velit aliquid blanditiis magni et optio, dicta eum error repudiandae eos cumque est, placeat ea molestias ad tempore repellendus dolore beatae doloribus laborum expedita dolorum. Quidem laboriosam illo ea tempora do100Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, maxime optio. Molestiae labore nobis facilis neque ut cumque aspernatur eum? Rerum, et eveniet exercitationem tempore sapiente in perspiciatis quisquam placeat laborum dolor repellat laboriosam porro minus maiores nostrum nobis nihil? Quo minus quod voluptatum alias obcaecati enim quia nam iste provident, ut, pariatur adipisci neque sequi aspernatur veritatis. Dolore consequatur quisquam harum tempore facere praesentium nihil repellat animi placeat quos, illo iure doloremque maxime molestiae impedit fugit blanditiis qui aperiam. Iste quas ut corrupti ipsa animi possimus pariatur quasi optio. Voluptatum ipsa odio harum, quasi in velit asperiores porro officiis.que!</div> -->
+
+    <!-- <div id="overflow">100Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, maxime optio. Molestiae labore nobis facilis neque ut cumque aspernatur eum? Rerum, et eveniet exercitationem tempore sapiente in perspiciatis quisquam placeat laborum dolor repellat laboriosam porro minus maiores nostrum nobis nihil? Quo minus quod voluptatum alias obcaecati enim quia nam iste provident, ut, pariatur adipisci neque sequi aspernatur veritatis. Dolore consequatur quisquam harum tempore facere praesentium nihil repellat animi placeat quos, illo iure doloremque maxime molestiae impedit fugit blanditiis qui aperiam. Iste quas ut corrupti ipsa animi possimus pariatur quasi optio. Voluptatum ipsa odio harum, quasi in velit asperiores porro officiis. ipsum dolor sit amet consectetur adipisicing elit. Omnis, at repudiandae voluptate voluptates porro ratione eaque laborum nesciunt doloribus ipsam ipsum consequatur culpa voluptatibus maxime dolores cumque iure in do100Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, maxime optio. Molestiae labore nobis facilis neque ut cumque aspernatur eum? Rerum, et eveniet exercitationem tempore sapiente in perspiciatis quisquam placeat laborum dolor repellat laboriosam porro minus maiores nostrum nobis nihil? Quo minus quod voluptatum alias obcaecati enim quia nam iste provident, ut, pariatur adipisci neque sequi aspernatur veritatis. Dolore consequatur quisquam harum tempore facere praesentium nihil repellat animi placeat quos, illo iure doloremque maxime molestiae impedit fugit blanditiis qui aperiam. Iste quas ut corrupti ipsa animi possimus pariatur quasi optio. Voluptatum ipsa odio harum, quasi in velit asperiores porro officiis. optio possimus ullam? Dignissimos, inventore id cumque fuga mollitia repellendus tempora suscipit natus rem, adipisci eveniet minus commodi laborum quos. Sapiente nihil rem temporibus minus quod dolore dicta quaerat ex natus perspiciatis placeat nostrum reiciendis, ipsa quasi aliquam mollitia libero. Aliquam, culpa sed et recusandae quibusdam rem aspernatur. Neque placeat, nemo possimus quasi harum, quidem ad laudantium enim ut voluptas illum ipsum. Reiciendis iusto praesentium cumque voluptatum earum, quis assumenda nostrum fugiat quibusdam ipsam alias eveniet velit, officia qui. A provident amet sunt, earum dolorum quasi distinctio atque id tempora.100Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, maxime optio. Molestiae labore nobis facilis neque ut cumque aspernatur eum? Rerum, et eveniet exercitationem tempore sapiente in perspiciatis quisquam placeat laborum dolor repellat laboriosam porro minus maiores nostrum nobis nihil? Quo minus quod voluptatum alias obcaecati enim quia nam iste provident, ut, pariatur adipisci neque sequi aspernatur veritatis. Dolore consequatur quisquam harum tempore facere praesentium nihil repellat animi placeat quos, illo iure doloremque maxime molestiae impedit fugit blanditiis qui aperiam. Iste quas ut corrupti ipsa animi possimus pariatur quasi optio. Voluptatum ipsa odio harum, quasi in velit asperiores porro officiis. ipsum dolor sit amet consectetur adipisicing elit. Quo distinctio incidunt quam itaque! Ab, blanditiis sapiente, perspiciatis vitae quis veniam quae temporibus, voluptas consequuntur alias repellat nemo architecto excepturi non.</div> -->
+
+    <!-- <div id="borderRadius">
+        100Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, maxime optio. Molestiae labore nobis facilis neque ut cumque aspernatur eum? Rerum, et eveniet exercitationem tempore sapiente in perspiciatis quisquam placeat laborum dolor repellat laboriosam porro minus maiores nostrum nobis nihil? Quo minus quod voluptatum alias obcaecati enim quia nam iste provident, ut, pariatur adipisci neque sequi aspernatur veritatis. Dolore consequatur quisquam harum tempore facere praesentium nihil repellat animi placeat quos, illo iure doloremque maxime molestiae impedit fugit blanditiis qui aperiam. Iste quas ut corrupti ipsa animi possimus pariatur quasi optio. Voluptatum ipsa odio harum, quasi in velit asperiores porro officiis. ipsum dolor, sit amet consectetur adipisicing elit. Quasi esse cupiditate enim! Voluptas, nobis pariatur deserunt voluptatum maiores corporis minima culpa iusto ut expedita nulla eaque magni itaque ullam deleniti laboriosam. Iusto a nihil ipsa minus illo cupiditate illum vitae ducimus accusamus! Repudiandae quod ad quisquam vitae earum, voluptates do100Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, maxime optio. Molestiae labore nobis facilis neque ut cumque aspernatur eum? Rerum, et eveniet exercitationem tempore sapiente in perspiciatis quisquam placeat laborum dolor repellat laboriosam porro minus maiores nostrum nobis nihil? Quo minus quod voluptatum alias obcaecati enim quia nam iste provident, ut, pariatur adipisci neque sequi aspernatur veritatis. Dolore consequatur quisquam harum tempore facere praesentium nihil repellat animi placeat quos, illo iure doloremque maxime molestiae impedit fugit blanditiis qui aperiam. Iste quas ut corrupti ipsa animi possimus pariatur quasi optio. Voluptatum ipsa odio harum, quasi in velit asperiores porro officiis.que. Illo rerum dignissimos veritatis quod amet nemo placeat, voluptate cum, saepe impedit dicta iusto sapiente in fugit id, ut quia. Quis iure expedita voluptatem tenetur cupiditate, aspernatur perspiciatis sed laudantium debitis necessitatibus non exercitationem magnam dicta accusantium nulla minus enim sunt? In totam, repudiandae minus eius eos id tempore, ullam maxime ea voluptas vitae quo veritatis voluptates? Perspiciatis, commodi velit. Et nesciunt corporis do100Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, maxime optio. Molestiae labore nobis facilis neque ut cumque aspernatur eum? Rerum, et eveniet exercitationem tempore sapiente in perspiciatis quisquam placeat laborum dolor repellat laboriosam porro minus maiores nostrum nobis nihil? Quo minus quod voluptatum alias obcaecati enim quia nam iste provident, ut, pariatur adipisci neque sequi aspernatur veritatis. Dolore consequatur quisquam harum tempore facere praesentium nihil repellat animi placeat quos, illo iure doloremque maxime molestiae impedit fugit blanditiis qui aperiam. Iste quas ut corrupti ipsa animi possimus pariatur quasi optio. Voluptatum ipsa odio harum, quasi in velit asperiores porro officiis.que similique, possimus enim pariatur recusandae nisi!
+    </div> -->
+
+    <!-- <div id="box-shadow"></div> -->
+
+    <!-- <h1>Float</h1>
+    <div id="float1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, maxime optio. Molestiae labore nobis facilis neque ut cumque aspernatur eum? Rerum, et eveniet exercitationem tempore sapiente in perspiciatis quisquam placeat laborum dolor repellat laboriosam porro minus maiores nostrum nobis nihil? Quo minus quod voluptatum alias obcaecati enim quia nam iste provident, ut, pariatur adipisci neque sequi aspernatur veritatis. Dolore consequatur quisquam harum tempore facere praesentium nihil repellat animi placeat quos, illo iure doloremque maxime molestiae impedit fugit blanditiis qui aperiam. Iste quas ut corrupti ipsa animi possimus pariatur quasi optio. Voluptatum ipsa odio harum, quasi in velit asperiores porro officiis. ipsum dolor sit amet consectetur adipisicing elit. A, itaque!</div>
+    <div id="float2">100Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, maxime optio. Molestiae labore nobis facilis neque ut cumque aspernatur eum? Rerum, et eveniet exercitationem tempore sapiente in perspiciatis quisquam placeat laborum dolor repellat laboriosam porro minus maiores nostrum nobis nihil? Quo minus quod voluptatum alias obcaecati enim quia nam iste provident, ut, pariatur adipisci neque sequi aspernatur veritatis. Dolore consequatur quisquam harum tempore facere praesentium nihil repellat animi placeat quos, illo iure doloremque maxime molestiae impedit fugit blanditiis qui aperiam. Iste quas ut corrupti ipsa animi possimus pariatur quasi optio. Voluptatum ipsa odio harum, quasi in velit asperiores porro officiis. ipsum dolor sit amet consectetur adipisicing elit. A, itaque!</div> -->
+
+    <h1>CSS Clear</h1>
+    <div id="head">
+        <div id="box1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat minima explicabo officiis quo placeat voluptatibus laudantium soluta perspiciatis. Velit perferendis earum sed recusandae cumque consequatur expedita iste fuga ab, placeat aliquam reiciendis reprehenderit dignissimos quidem tempora, eius inventore. Minus, officia suscipit accusantium dolore beatae cum libero veritatis quasi nisi? Cum distinctio consequatur doloremque a odio, laborum, tenetur ipsum fugit odit doloribus veritatis expedita voluptatibus tempore voluptatum maiores perspiciatis soluta dolore nostrum ipsam sint! Numquam incidunt, error quidem fugit, praesentium adipisci voluptate sunt, minus aspernatur quo similique possimus! Perspiciatis qui, minima quis obcaecati voluptatem, deserunt, expedita fugit vitae adipisci totam delectus!</div>
+        <div id="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ea consequuntur, temporibus vel veritatis illum totam rerum labore aspernatur eligendi officia molestiae accusantium unde odit reprehenderit, ducimus earum doloremque, laborum qui magnam! Temporibus facilis accusantium iure distinctio quasi beatae, quis quibusdam accusamus, sed rerum minus cupiditate modi libero eius aliquid?</div>
+        <div id="box3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem neque repellat ab modi natus nulla aperiam eaque consequuntur in, aspernatur, ut quam? Magni et repudiandae vel numquam, eaque repellendus eos eum. Ex molestias laudantium obcaecati commodi hic saepe, nemo esse sunt culpa a nisi quibusdam repellendus voluptatem est quae magni architecto iure laboriosam consectetur. Ullam ad repudiandae eos nam incidunt, magnam maiores perferendis laboriosam expedita illo porro doloremque in molestias maxime minus iure aspernatur? Optio, eligendi sit eaque sapiente corrupti praesentium! A minus praesentium asperiores, vel atque magni quaerat eveniet in. Est fuga voluptas vel! Exercitationem nemo consequatur voluptate at?</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient</title>
+</head>
+<style>
+    #box1{
+        width: 600px;
+        height: 400px;
+        border: 2px solid;
+        display: inline-block;
+        /* background: linear-gradient(to left, red, yellow, blue, green); */
+        /* background: linear-gradient(45deg, red, yellow, blue, green); */
+        background: radial-gradient(closest-side at 65% 45%, red, green, blue); }
+    #box2{
+        width: 600px;
+        height: 400px;
+        border: 2px solid;
+        display: inline-block;
+        /* background: linear-gradient(to right, red, yellow, blue, green); */
+        background: radial-gradient(farthest-side at 45% 55%, red, green, blue, yellow);   
+    }
+    #box3{
+        width: 600px;
+        height: 400px;
+        border: 2px solid;
+        display: inline-block;
+        /* background: linear-gradient(to bottom, red, yellow, blue, green);  */
+        background: radial-gradient(closest-corner at 65% 45%, red, yellow, blue, green)
+    }
+    #box4{
+        width: 600px;
+        height: 400px;
+        border: 2px solid;
+        display: inline-block;
+        /* background: linear-gradient(to top, red, yellow, blue, green); */
+        background: radial-gradient(farthest-corner at 65% 45%, red, yellow, blue, green);
+ }  
+</style>
+<body>
+    <h1>Linear-Gradient</h1>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+
+    <div id="box5"></div>
+    <div id="box6"></div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #h1{
+            text-shadow: 2px 2px red;
+        }
+        #h2{
+            text-shadow: 2px 2px 5px red;
+        }
+        #h3{
+            color: white;
+            text-shadow: 2px 2px 5px #000000;
+        }
+        #h4{
+            text-shadow: 0 0 5px #FF0000;
+        }
+        #h5{
+            text-shadow: 0 0 5px #FF0000, 0 0 5px #0000FF;
+        }
+        #h6{
+            color: white;
+            text-shadow: 1px 1px 2px black, 1px 1px 25px blue, 1px 1px 5px darkblue;
+        }
+        #h7{
+            color: coral;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+        #div1{
+            margin: 50px;
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background: coral;
+            box-shadow:8px 8px lightblue;
+        }
+
+        #div2{
+            margin: 50px;
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background: coral;
+            box-shadow:8px 8px 5px rgb(17, 179, 233);
+        }
+
+        #div2{
+            margin: 50px;
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background: coral;
+            box-shadow:8px 8px 5px rgb(17, 179, 233);
+        }
+        
+        #div3{
+            margin: 50px;
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background: coral;
+            box-shadow:10px 10px 5px 12px rgb(17, 179, 233);
+        }
+        
+        #div4{
+            margin: 50px;
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background: coral;
+            box-shadow:8px 8px 5px rgb(17, 179, 233) inset;
+        }
+
+        #div5{
+            margin: 50px;
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background: coral;
+            box-shadow:8px 8px 5px 12px rgb(17, 179, 233) inset;
+        }
+        #mulDiv1{
+            border: 1px solid black;
+            margin: 50px;
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+        }
+
+        #mulDiv2{
+            border: 1px solid black;
+            margin: 50px;
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+        }
+
+        #mulDiv3{
+            border: 1px solid black;
+            margin: 50px;
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            box-shadow: 5px 5px 8px 5px blue, 10px 10px 8px 10px red, 15px 15px 8px 20px green;
+        }
+
+        #mulDiv4{
+            border: 1px solid black;
+            margin: 50px;
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            box-shadow: 5px 5px 8px blue inset, 10px 10px 8px red inset, 15px 15px 8px green inset;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text-Shadow</h1>
+    <h1 id="h1">This Shadow Effect.</h1>
+    <h1 id="h2">This Shadow Effect.</h1>
+    <h1 id="h3">This Shadow Effect.</h1>
+    <h1 id="h4">This Shadow Effect.</h1>
+    <h1 id="h5">This Shadow Effect.</h1>
+    <h1 id="h6">This Shadow Effect.</h1>
+    <h1 id="h7">This Shadow Effect.</h1>
+
+    <h1>Box-Shadow</h1>
+    <div id="div1">A &lt; div &gt; element with a lightblue box-shadow</div>
+    <div id="div2">A &lt; div &gt; element with a 5px blurred, lightblue box-shadow</div>
+    <div id="div3">A &lt; div &gt; element with a blurred, lightblue box-shadow, with a spread radius of 12px</div>
+    <div id="div4">A &lt; div &gt; element with a blurred, lightblue, inset box-shadow</div>
+    <div id="div5">A &lt; div &gt; element with a blurred, lightblue, inset box-shadow</div>
+
+    <h1>Multiple Box Shadow</h1>
+    <div id="mulDiv1"></div>
+    <div id="mulDiv2"></div>
+    <div id="mulDiv3"></div>
+    <div id="mulDiv4"></div> 
+</body>
+</html>
