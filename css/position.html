@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position in CSS</title>
+    <style>
+        section{
+            width: 300px;
+            height: 200px;
+            border: 1px solid;
+            position: relative;
+        }
+
+        .box{
+            padding: 5px;
+            color: rgb(36, 36, 36);
+            width: fit-content; 
+            position: absolute;
+            background: rgb(243, 181, 101);
+        }
+        #box1{
+            /* right: 0; */
+            /* z-index: 1; */
+            right: 0;
+        }
+        #box2{
+            /* z-index: 2; */
+        }
+        #box3{
+            /* z-index: 3; */
+            bottom: 0;
+        }
+        #box4{
+            /* z-index: 4; */
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="box1" class="box">top right</div>
+        <div id="box2" class="box">top left</div>
+        <div id="box3" class="box">bottom left</div>
+        <div id="box4" class="box">bottom right</div>
+    </section>
+</body>
+</html>

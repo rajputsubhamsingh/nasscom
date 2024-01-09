@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body{
+            background: wheat;
+            font-family: Arial, Helvetica, sans-serif;
+            /* font-size: 100px; */
+        }
+        @media screen and (max-width:1200px){
+            body{
+                background: pink;  font-family: Arial, Helvetica, sans-serif;
+                font-size: 70px;
+            }
+        }
+
+        @media screen and (max-width:1000px){
+            body{
+                background: lightblue;
+                font-size: 70px;
+            }
+        }
+
+        @media screen and (max-width:768px){
+            body{
+                background: yellow;
+                font-size: 50px;
+            }
+        }
+
+        @media screen and (max-width:576px){
+            body{
+                background: green;
+                font-size: 30px;
+            }
+        }
+
+        a{ 
+            text-decoration: none;
+            font-size: xx-large;
+            padding: 10px;
+            /* transition: ease; */
+            /* transition: ease-in; */
+            /* transition: ease-in-out; */
+            /* transition: ease-out; */
+            /* transition: all; */
+            transition: 2s;
+        }
+
+        a:hover{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, sequi? Asperiores quidem ipsa, voluptatibus vel mollitia est, esse ab perferendis placeat beatae nostrum. Esse nulla harum sint ipsam enim ullam.</p> -->
+
+    <a href="">Click here</a>
+</body>
+</html>
