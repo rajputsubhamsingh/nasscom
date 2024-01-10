@@ -1,6 +1,7 @@
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/rajputsubhamsingh/nasscom.git
-git push -u origin main
+git remote add origin https://github.com/rajputsubhamsingh/nasscom.git   
+git remote set-url origin https://github.com/rajputsubhamsingh/nasscom.git
+git status
+git add .
+git commit -m "position, media-queries, z-index and other."
+git pull origin main
+git push origin main
