@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flox-grow</title>
+
+    <style>
+        .container{
+            background: #eee;
+            width: 600px;
+            height: 400px;
+            margin: 50px auto 0;
+            padding: 10px;
+            border: 3px solid;
+            display: flex;
+            align-items: flex-start;
+    
+        }
+        .items{
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            /* margin: 5px; */
+            flex-grow: 1;
+        }
+        .item1{
+            background: orangered; 
+            /* flex-grow: 3; */
+            flex-basis: 200px;
+        }
+        .item2{
+            background: yellowgreen;
+            flex-basis: 200px; 
+        }
+        .item3{
+            background: mediumpurple;
+            /* flex-grow: 3; */
+        }
+        .item4{
+            background: hotpink; 
+        } 
+        .item5{
+            background: royalblue;
+            /* flex-grow: 3; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+        <div class="items item5">Five</div>
+    </div>
+</body>
+</html>

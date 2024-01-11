@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .container{
+            background: #eee;
+            width: 600px;
+            height: 400px;
+            margin: 50px auto 0;
+            padding: 10px;
+            border: 3px solid;
+            display: flex;
+
+
+            /* flex-direction: row-reverse; */
+            /* flex-direction: row; */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse;  */
+
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: wrap; */
+
+            /* justify-content: center; */
+            /* justify-content: end; */
+            /* justify-content: left; */
+            /* justify-content: right; */
+
+            /* align-items: stretch; */
+            /* align-items: center; */
+            /* align-items: end; */
+            /* align-items: start; */
+            /* align-items: baseline; */
+            align-items: flex-start;
+    
+        }
+
+        /* .container{
+            background: #eee;
+            width: 300px; 
+            margin: 50px;
+            padding: 10px;
+            border: 3px solid;
+            display: flex;
+        } */
+        .items{
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .item1{
+            background: orangered;
+            /* align-self: center; */
+            order: 1;
+        }
+        .item2{
+            background: yellowgreen;
+            order: -2;
+        }
+        .item3{
+            background: mediumpurple;
+        }
+        .item4{
+            background: hotpink;
+            order: -1;
+        }
+
+
+        .item5{
+            background: royalblue;
+        }
+
+        .item6{
+            background: orchid;
+        }
+        .item7{
+            background: goldenrod;
+        }
+        .item8{
+            background: #7DCEA0;
+        }
+
+        /* .box{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid;
+            display: flex;
+            background: orangered; 
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+
+
+        <div class="items item5">Five</div>
+        <!-- <div class="items item6">Six</div>
+        <div class="items item7">Seven</div>
+        <div class="items item8">Eight</div> -->
+
+        <!-- <div class="box">
+            <h3>Lorem.</h3>
+        </div> -->
+    </div>
+</body>
+</html>
