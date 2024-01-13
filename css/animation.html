@@ -15,7 +15,7 @@
             overflow-x: hidden;
         }
 
-        img{
+        /* img{
             width: 100px;
             height: auto;
 
@@ -39,12 +39,38 @@
                 left: 90%; 
             }
              
+        } */
+
+        .box{
+            width: 150px;
+            height: 150px;
+            background: #000;
+            animation: sample 2s 1s;
+            animation-fill-mode: backwards;
+        }
+        @keyframes sample{
+           0%{
+            background: yellow; 
+            width: 250px;
+           }
+            50%{
+            background: green; 
+            width: 250px;
+           }
+            100%{
+            background: red; 
+            width: 250px;
+           } 
         }
     </style>
 </head>
 <body>
-    <section>
+    <!-- <section>
         <img src="../css/IMG/2354642.jpg" alt="">
-    </section>
+    </section> -->
+
+    <div class="box">
+
+    </div>
 </body>
 </html>
