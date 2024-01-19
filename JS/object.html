@@ -91,15 +91,25 @@
         // console.log(str.charCodeAt(1));   // a = 97
         // console.log(String.fromCharCode(65)); // 65 = A
 
+        
+        for (let i = 1; i <= 5; i++) {
+            let k = 65
+            for (let j = 1; j <=i; j++){
+                document.write(String.fromCharCode(k)); 
+                k++   
+            }
+            document.write('<br>')
+        }
 
-        // for (let i = 1; i <= 5; i++) {
-        //     for (let j = 65; j < 70; j++){
-        //         console.log(String.fromCharCode(j));    
-        //     }
-        // }
+        // A
+        // AB
+        // ABC
+        // ABCD
+        // ABCDE
 
 
-        var str = "javaScript is a great is language"
+
+        // var str = "javaScript is a great is language"
         // var b = str.split(" ")
         // console.log(b);
         // console.log(typeof str.split(" "));
@@ -117,10 +127,9 @@
         // console.log(b);
 
 
-
         // var b = str.substr(3, 10)
         // console.log(b);
-        
+
 
     </script>
 </body>

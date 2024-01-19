@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <script>
+        console.log(Math.ceil(4.3));   // upper ki value lega
+        console.log(Math.floor(4.3));  // niche ki value lega
+        console.log(Math.round(4.3));  // 4.3 hai to niche ka value lega
+        console.log(Math.round(4.6));  // 4.6 hai to upper ki value lega
+        
+        console.log(Math.trunc(4.3));  // remove decimal value 
+        console.log(Math.max(12, 12, 3, 4, 34, 3, 32, 323, 22, 2));
+        console.log(Math.min(12, 12, 3, 4, 34, 3, 32, 323, 22, 2.1)); 
+
+        console.log(Math.sqrt(4));
+        console.log(Math.cbrt(8));
+        console.log(Math.pow(2, 4));
+        console.log(Math.random() * 10);
+
+
+        // generate random quotes
+        var quotes = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+        var randomIndex = Math.floor(Math.random() * quotes.length)
+        console.log(randomIndex);
+        console.log(quotes[randomIndex]);
+
+        console.log(Math.abs(-56));   // alway take positive values
+        console.log(Math.PI);
+
+
+
+        // number method  
+
+        // var a = "99"
+        // var num = Number(a)
+        // console.log(1+num);
+
+        // var a = "99"
+        // var num = Number.isInteger(a)
+        // console.log(num);
+
+
+        // var num1 = isFinite(a)
+        // console.log(num1);
+
+        // var b = 99.433344
+        // var num3 = b.toFixed(2)
+        // console.log(num3);
+
+        var c = 99.433344
+        // var num4 = c.toPrecision(4)   // 99.43, jitna value pass karenge to utna number ko pick kare left to right
+        var num4 = c.toPrecision(3)      // 99.4
+            console.log(num4);
+
+
+    </script>
+</body>
+</html>

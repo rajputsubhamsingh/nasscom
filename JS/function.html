@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    
+    <script>
+        // var a = 10          // global variable declaration
+        // function demo(){
+        //     var a = 25      // Local variable declaration
+        //     console.log("Local variable: " + a);
+        //     // document.write(a)
+        // }
+        // console.log("Global variable: " + a);
+        // demo()
+
+
+        // some() & every()
+        // some() - agar ek bhi 
+        // var ages = [10, 13, 18, 20]
+        // document.write(ages + "<br><br>")
+
+        // var b = ages.some(checkAdult)
+        // document.write(b + "<br><br>")
+
+        // function checkAdult(age){
+        //     return age >= 18
+        // }
+
+
+        // every()
+        // var ages = [10, 13, 18, 20]
+        // var ages = [23, 21, 18, 20]
+        // document.write(ages + "<br><br>")
+
+        // var b = ages.every(checkAdult)
+        // document.write(b + "<br><br>")
+
+        // function checkAdult(age) {
+        //     return age >= 18
+        // }
+
+
+        // find() & findIndex()
+        // var ages = [10, 21, 18, 20]
+        // var adultAge = 18
+
+        // document.write(ages.find(checkAdult) + "<br><br>")
+        // document.write(ages.findIndex(checkAdult) + "<br><br>")
+
+        // function checkAdult(age) {
+        //     return age >= 18
+        // }
+
+
+
+        // filter()  - create array , filled with all array elements that pass a test. 
+        // 18 aur 18 se upar wale sare values aa jayenge
+        // var ages = [10, 21, 18, 20]
+        // var adultAge = 18
+
+        // document.write(ages.filter(checkAdult) + "<br><br>") 
+
+        // function checkAdult(age) {
+        //     return age >= 18
+        // }
+
+
+        // toString () & fill()
+        // var a = ["shubh", "sohan", "mohan"]
+        // console.log(a.toString());
+        // var b = a.fill("Ram")
+        // console.log(b);
+
+
+        // forEach()  & map()
+        // var a = ["shubh", "sohan", "mohan"]
+        // a.forEach(function(value,index) {
+        //     console.log(value);
+        // })
+
+        // a.map(function(value, index){
+        //     console.log(index + ":" + value);
+        // })
+
+
+        // forIn and Forof
+        var a = {
+            firstName : "Ram",
+            lastName : "Singh",
+            age : 18,
+            country : "India"
+        };
+
+        for (const i in a) {
+            console.log("Key : " + i);
+        }
+
+
+        // error
+        // for (const i of a) {
+        //     console.log("Values : " +  a[i]);
+        // }
+        
+    </script>
+</body>
+</html>
