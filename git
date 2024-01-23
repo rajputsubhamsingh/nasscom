@@ -1,4 +1,4 @@
-git remote add origin https://github.com/rajputsubhamsingh/nasscom.git   
+git remote add origin https://github.com/rajputsubhamsingh/nasscom.git  
 git remote set-url origin https://github.com/rajputsubhamsingh/nasscom.git
 git status
 git add .
