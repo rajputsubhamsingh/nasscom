@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - JavaScript</title>
+</head>
+<body>
+    <div class="outer" style="width: 200px; height: 200px; background: orangered;"><br>
+        <div class="inner" style="width: 100px; height: 100px; background: olivedrab;"></div>
+    </div>
+    <button class="btn">Click Me</button>
+
+    <script>
+        // document.querySelector('.btn').addEventListener('click', function(){
+        //     document.querySelector('.outer').style.backgroundColor = 'orangered'
+        // })
+
+
+        // useCapturing 
+        // inner ke baad outer
+        document.querySelector('.inner').addEventListener('click',
+        function(){
+            console.log('Inner Div');
+        })
+
+        document.querySelector('.outer').addEventListener('click',
+        function () {
+            console.log('Outer Div');
+        })
+
+
+        // outer ke baad inner
+        document.querySelector('.inner').addEventListener('click',
+        function () {
+            console.log('Inner Div');
+        }, true)
+
+        document.querySelector('.outer').addEventListener('click',
+        function () {
+            console.log('Outer Div');
+        }, true)
+    </script>
+</body>
+</html>

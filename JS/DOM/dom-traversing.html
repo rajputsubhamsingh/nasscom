@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom - Traversing</title>
+</head>
+<body>
+    <div id="outer">
+        <h2>Outer</h2>
+        <div id="inner">
+            <div>A</div>
+            <div>B</div>
+            <div id="child-C">C</div>
+            <div>D</div>
+            <div class="last">E</div>
+        </div>
+    </div>
+
+    <div id="test">Lorem, ipsum dolor.</div>
+    <ul id="list">
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Grapes</li>
+        <li>Banana</li>
+    </ul>
+
+    <ul id="list2">
+        <li>Carrot</li>
+        <li>Reddish</li> 
+    </ul>
+
+    <script>
+        // var a = document.getElementById('inner').parentElement;
+        // console.log(a);
+
+        // var a = document.getElementById('inner').parentElement.style.background = 'orangered';
+        // console.log(a);
+
+        // var a = document.getElementById('child-C').parentNode;
+        // console.log(a);
+
+
+        // var a = document.getElementById('outer').children;
+        // console.log(a);
+        // var a = document.getElementById('inner').children[1];
+        // console.log(a);
+        // var a = document.getElementById('inner').childNodes;
+        // console.log(a);
+
+        // var a = document.getElementById('inner').firstElementChild;
+        // console.log(a);
+        // var a = document.getElementById('inner').lastElementChild;
+        // console.log(a);
+        // var a = document.getElementById('outer').lastElementChild;
+        // console.log(a);
+
+
+        // var a = document.getElementById('child-C').nextElementSibling;
+        // console.log(a);
+
+        // var a = document.getElementById('child-C').previousElementSibling;
+        // console.log(a);
+
+
+        // create methods  
+
+        // var newElement = document.createElement('h2')
+        // console.log(newElement);
+        // var newText = document.createTextNode('This is just text')
+        // console.log(newText);
+        // var newComment = document.createComment('This is for testing purpose.')
+        // console.log(newComment);
+
+        // // append methods
+        // // console.log(newElement.appendChild(newText));
+
+        // newElement.appendChild(newText)
+
+        // // document.getElementById('test').appendChild(newElement)
+        // // document.getElementById('test').appendChild(newComment)
+
+        // // insert before 
+        // var target = document.getElementById('test')
+        // target.insertBefore(newElement, target.childNodes[0])
+
+
+
+        // var target = document.getElementById('test')
+        // var newElement = '<h2>This is the h2 heading </h2>'
+        // target.insertAdjacentHTML('afterbegin', newElement)
+        // target.insertAdjacentHTML('beforebegin', newElement)
+        // target.insertAdjacentHTML('afterend', newElement)
+        // target.insertAdjacentHTML('beforeend', newElement)
+
+
+
+        // replace element 
+
+        // var newElement = document.createElement('li')
+        // var newText = document.createTextNode('wow new text')
+        // newElement.appendChild(newText)
+        // var target = document.getElementById('list')
+        // var oldElement = target.children[0]
+        // target.replaceChild(newElement, oldElement)
+        
+
+        // remove element 
+
+        // var target = document.getElementById('list')
+        // var oldElement = target.children[3]
+        // target.removeChild(oldElement)
+
+
+        // clonig node
+        // var target = document.getElementById('list').children[0]
+        // var copyElement = target.cloneNode(true)
+        // console.log(copyElement);
+
+        // var copyElement = target.cloneNode(false)
+        // console.log(copyElement);
+
+
+        var target =  document.getElementById('test')
+        var find = target.hasAttribute('clas')
+        console.log(find);
+
+        var target = document.getElementById('test')
+        var find = target.hasChildNodes()
+        console.log(find);
+    </script>
+</body>
+</html>

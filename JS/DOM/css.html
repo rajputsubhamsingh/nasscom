@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling Methods</title>
+</head>
+<body> 
+    <div id="header" style="border: 1px solid;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, necessitatibus!</div>
+
+    <script>
+        let element = document.querySelector("#header").style.border
+        console.log(element);
+
+        element = document.querySelector("#header").className = 'demo'
+        console.log(element);
+
+        element = document.querySelector("#header").classList = 'demo1 demo2'
+        console.log(element);
+
+        // ------------------------------------------
+
+        element = document.querySelector("#header").classList
+        console.log(element);
+
+        element = document.querySelector("#header").className
+        console.log(element);
+    </script>
+</body>
+</html>
