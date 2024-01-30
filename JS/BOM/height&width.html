@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Height & Width</title>
+</head>
+
+<body>
+    <button onclick="openWindow()">Open Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+    <button onclick="moveToWindow()">Move To Window</button>
+    <button onclick="moveByWindow()">Move By Window</button>
+
+    <button onclick="resizeTo()">Resize To Window</button>
+    <button onclick="resizeBy()">Resize By Window</button>
+
+    <!-- <button onclick="scrollTo()">Scroll To</button> -->
+    <button onclick="windowscrollBy()">Scroll By</button>
+    <script>
+        // var iheight = window.innerHeight;
+        // console.log(iheight);
+
+        // var oheight = window.outerHeight;
+        // console.log(oheight);
+
+        // var iwidth = window.innerWidth;
+        // console.log(iwidth);
+
+        // var owidth = window.outerWidth;
+        // console.log(owidth);
+
+        //open & close
+        // var myWindow;
+        // function openWindow(){
+        //     // window.open("http://127.0.0.1:5501/JS/DOM/setInterval.html", "_parent", "width=500px, height=200px")
+        //     myWindow = window.open("http://127.0.0.1:5501/JS/DOM/setInterval.html", "", "width=500px, height=200px,left=100px,top=150px")
+        // }
+        function closeWindow() {
+            myWindow.close()
+        }
+
+
+        // moveBy & moveTo
+        var myWindow;
+        function openWindow() {
+            myWindow = window.open("", "", "width=500px, height=200px");
+            myWindow.document.write("<p>This is myWindow </p>")
+
+        }
+        function moveToWindow() {
+            myWindow.moveTo(100, 100)
+        }
+        function moveByWindow() {
+            myWindow.moveBy(100, 100)
+        }
+
+        // resizeTo() & resizeBy()  
+
+        function resizeTo(){
+            myWindow.resizeTo(400,400)
+        }
+        function resizeBy(){
+            myWindow.resizeBy(400,400)
+        }
+
+        // scrollTo() && scrollBy()   
+        function windowscrollBy(){
+            window.scrollBy(0, 20)
+        }
+    </script>
+</body>
+
+</html>

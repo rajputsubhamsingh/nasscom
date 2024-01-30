@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+</head>
+
+<body>
+    <!-- <form action="">
+        <label >Name </label><input type="text"><br><br>
+        <label >Password </label><input type="text"><br><br>
+        <label >Class </label><input type="text"><br><br>
+        <label >Country </label>
+        <select name="" id="">
+            <option value="India">India</option>
+            <option value="China">China</option>
+            <option value="Rassia">Rassia</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+        </select>
+
+    </form> -->
+
+
+    <form action="">
+        <label>Name </label><input type="text" 
+            onfocus="onfocusFunction(this)" 
+            onblur="onblurFunction()"
+            oninput="inputFunction(this)" 
+            onselect="selectFunction()"
+            onsubmit="submitFunction()" id="fname"><br><br>
+        <label>Password </label><input type="text" onblur="onblurFunction()" id="password"><br><br>
+        <label>Class </label><input type="text"><br><br>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+
+        <input type="submit" name="" id="">
+
+        <hr>
+        <p id="test"></p>
+    </form>
+</body>
+<script>
+    // function onfocusFunction(){
+    //     document.getElementById('fname').style.backgroundColor = 'orangered'
+    // }
+
+    // function onblurFunction(){
+    //     document.getElementById('fname').style.background = 'yellowgreen'
+    // }
+
+    // function onblurFunction(){
+    //     document.getElementById('password').style.background = 'yellowgreen'
+    // }
+
+    function onfocusFunction(element) {
+        element.style.background = 'orangered'
+        console.log(element);
+    }
+
+    function inputFunction(element) {
+        var x = element.value;
+        document.getElementById('test').innerHTML = x;
+        console.log(x);
+    }
+
+    function selectFunction() {
+        document.getElementById('fname').style.background = 'orangered'
+        console.log(element);
+    }
+
+    function submitFunction() {
+        var x = document.getElementById('fname').value
+        console.log("Hello" + x);
+    }
+</script>
+
+</html>
