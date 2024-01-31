@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html_Css</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            max-width: 100px;
+        }
+
+        .nav-links,
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+
+        /* logo animation  */
+        .logo img {
+            transform: translateX(0);
+            animation: traverseLogo 5s linear infinite alternate;
+        }
+
+        @keyframes traverseLogo {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(100%);
+            }
+        }
+
+
+
+        /* main section css  */
+        main {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+
+        .card {
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .details-button {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+        }
+
+        .details-button:hover {
+            background-color: #2980b9;
+        }
+
+
+        /* product ke first row ke liye animation  */
+        @keyframes flipLeft {
+            from {
+                transform: perspective(300px) rotateY(0);
+            }
+
+            to {
+                transform: perspective(300px) rotateY(-180deg);
+            }
+        }
+
+        .card {
+            animation: flipLeft 2s ease-in-out;
+        }
+
+        /* product ke second row ke liye animation  */
+        @keyframes flipright {
+            from {
+
+                transform: perspective(300px) rotateY(-180deg);
+            }
+
+            to {
+                transform: perspective(300px) rotateY(0);
+            }
+        }
+
+        .card2 {
+            animation: flipright 2s ease-in-out;
+        }
+
+
+
+
+
+        /* __________________Footer______________________ */
+        footer {
+            background-color: #34495e;
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .newsletter {
+            flex: 1 1 300px;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .ntext {
+            margin-top: 20px;
+        }
+
+        .ntext label {
+            display: flex;
+            align-items: center;
+        }
+
+        .ntext input {
+            flex: 1;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        .ntext button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .ntext button:hover {
+            background-color: #2980b9;
+        }
+
+        .f-contact {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .f-contact>div {
+            max-width: 200px;
+            margin-right: 20px;
+        }
+
+        .f-contact h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .f-contact p {
+            margin: 8px 0;
+        }
+
+        .f-contact i {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        /* ________________________footer animation __________________ */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .newsletter div,
+        .ntext div,
+        .f-contact,
+        .f-contact>div {
+            animation: fadeUp 1s ease-in-out;
+        }
+
+
+
+
+        /* screen css  */
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+            }
+
+            .search-bar {
+                margin-top: 10px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background-color: #3498db;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            .nav-links a {
+                margin: 10px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .newsletter,
+            .ntext {
+                width: 100%;
+                max-width: none;
+            }
+
+            .f-contact {
+                flex-direction: column;
+            }
+
+            .f-contact>div {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/logo.gif" alt="E-Commerce Logo">
+            </div>
+            <div class="menu-toggle">&#9776;</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="error.html">Shop</a>
+                <a href="error.html">Categories</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <button type="submit">Search</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="card">
+            <img src="img/product.jpg" alt="Card Image 1">
+            <div class="card-content">
+                <h3>Card Title 1</h3>
+                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, quas.
+                </p>
+            </div>
+            <a href="error.html" class="details-button">Details</a>
+        </div>
+
+        <div class="card">
+            <img src="img/product.jpg" alt="Card Image 2">
+            <div class="card-content">
+                <h3>Card Title 2</h3>
+                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, quas.
+                </p>
+            </div>
+            <a href="error.html" class="details-button">Details</a>
+        </div>
+
+        <div class="card">
+            <img src="img/product.jpg" alt="Card Image 3">
+            <div class="card-content">
+                <h3>Card Title 3</h3>
+                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, quas.
+                </p>
+            </div>
+            <a href="error.html" class="details-button">Details</a>
+        </div>
+        <div class="card">
+            <img src="img/product.jpg" alt="Card Image 1">
+            <div class="card-content">
+                <h3>Card Title 4</h3>
+                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, quas.
+                </p>
+            </div>
+            <a href="error.html" class="details-button">Details</a>
+        </div>
+
+        <div class="card card2">
+            <img src="img/product2.jpg" alt="Card Image 1">
+            <div class="card-content">
+                <h3>Card Title 1</h3>
+                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, quas.
+                </p>
+            </div>
+            <a href="error.html" class="details-button">Details</a>
+        </div>
+
+        <div class="card card2">
+            <img src="img/product2.jpg" alt="Card Image 2">
+            <div class="card-content">
+                <h3>Card Title 2</h3>
+                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, quas.
+                </p>
+            </div>
+            <a href="error.html" class="details-button">Details</a>
+        </div>
+
+        <div class="card card2">
+            <img src="img/product2.jpg" alt="Card Image 3">
+            <div class="card-content">
+                <h3>Card Title 3</h3>
+                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, quas.
+                </p>
+            </div>
+            <a href="error.html" class="details-button">Details</a>
+        </div>
+        <div class="card card2">
+            <img src="img/product2.jpg" alt="Card Image 1">
+            <div class="card-content">
+                <h3>Card Title 4</h3>
+                <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, quas.
+                </p>
+            </div>
+            <a href="error.html" class="details-button">Details</a>
+        </div>
+    </main>
+    <footer>
+        <div class="newsletter">
+            <div>
+                <h2>Subscribe our Demo site</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="ntext">
+                <label>
+                    <input type="text" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </label>
+            </div>
+        </div>
+
+        <div class="f-contact">
+            <div>
+                <h1>Information</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, exercitationem.</p>
+                <i class="fa fa-whatsapp"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-telegram"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
+
+            <div>
+                <h1>Useful links</h1>
+                <p>About us</p>
+                <p>Gallery</p>
+                <p>Blog posts</p>
+                <p>Pricing plans</p>
+            </div>
+
+            <div>
+                <h1>Details</h1>
+                <p>Photographers</p>
+                <p>Gallery</p>
+                <p>About</p>
+                <p>Pricing plans</p>
+            </div>
+
+            <div>
+                <h1>Help & Support</h1>
+                <p>Privacy policy</p>
+                <p>Term & conditions</p>
+                <p>Technical support</p>
+                <p>Customer care</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
