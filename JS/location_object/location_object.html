@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Object</title>
+</head>
+
+<body>
+
+    <a href="#name">click</a>
+    <section id="name">hrhj</section>
+
+
+    <button onclick="backFunction()">Back History</button>
+    <button onclick="goFunction()">Forward</button>
+    <script>
+        // console.log(location);
+        // console.log(window.location);
+
+        // location.href = "https://www.google.com"
+
+        // location.assign("https://www.google.com")
+
+        
+        // console.log(location);
+        
+//not working  
+        function backFunction(){
+            history.back()
+        }
+
+        function goFunction(){
+            history.go(2)
+        }
+    </script>
+</body>
+
+</html>

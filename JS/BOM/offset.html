@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offset</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <button id="btn">Offset</button>
+
+    <script>
+        var box = document.getElementById('box');
+        document.getElementById("btn").addEventListener('click', function () {
+            console.log("Box OffsetTop : " + box.offsetTop);
+            console.log("Box OffsetLeft : " + box.offsetLeft);
+            console.log("Box OffsetWidth : " + box.offsetWidth);
+            console.log("Box OffsetHeight : " + box.offsetHeight);
+        })
+    </script>
+</body>
+
+</html>
