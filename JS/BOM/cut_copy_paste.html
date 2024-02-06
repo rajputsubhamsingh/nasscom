@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript Clipboard Events</h2>
+    <input type="text" id="myinput">  
+    
+    <script>
+        var target = document.getElementById('myinput');
+
+        target.addEventListener('copy', function(){
+            // console.clear()
+            console.log('You Copied Text.');
+        });
+
+        target.addEventListener('cut', function(){
+            // console.clear()
+            console.log('You Cut Text.');
+        });
+
+        target.addEventListener('paste', function(){
+            // console.clear()
+            console.log('You Paste Text.');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online - Offline</title>
+    <style>
+        .box{
+            width: 250px;
+            height: 250px;
+            border: 1px solid;
+        }
+        .box img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img src="userlogo.jpg" alt=""> 
+    </div>
+
+    <script>
+        var target = document.getElementById('box');
+
+        window.addEventListener('offline', function() {
+            target.innerHTML = 'Your Offline oops!!';
+            target.style.backgroundColor = 'red';
+        });
+
+        window.addEventListener('online', function() {
+            target.innerHTML = 'Your Online';
+            target.style.backgroundColor = 'yellow';
+        });
+
+        // if (navigator.onLine) {
+        //     console.log("Online");
+        // }
+        // else {
+        //     console.log("Offline");
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #circle {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 2px solid #000;
+        }
+
+        #bubble {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #3498db;
+            border-radius: 50%;
+        }
+        #circle1 {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid #000;
+        }
+
+        #bubble1 {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #3498db;
+            border-radius: 50%;
+        }
+    </style>
+    <title>Moving Bubble on Circle</title>
+</head>
+
+<body>
+    <div id="circle">
+        <div id="bubble"></div>
+        <div id="circle1">
+            <div id="bubble1"></div>
+        </div>
+    </div>
+    
+
+    <script>
+        const circle = document.getElementById('circle');
+        const bubble = document.getElementById('bubble');
+        const radius = 150; // Adjust the radius as needed
+        const speed = 0.02; // Adjust the speed as needed
+
+
+        const circle1 = document.getElementById('circle1');
+        const bubble1 = document.getElementById('bubble1');
+
+        let angle = 0;
+
+        function updateBubblePosition() {
+            const x = Math.cos(angle) * radius;
+            const y = Math.sin(angle) * radius;
+
+            bubble.style.left = (circle.offsetWidth / 2 + x - bubble.offsetWidth / 2) + 'px';
+            bubble.style.top = (circle.offsetHeight / 2 + y - bubble.offsetHeight / 2) + 'px';
+
+            bubble1.style.left = (circle1.offsetWidth / 2 + x - bubble1.offsetWidth / 2) + 'px';
+            bubble1.style.top = (circle1.offsetHeight / 2 + y - bubble1.offsetHeight / 2) + 'px';
+
+
+            angle += speed;
+
+            requestAnimationFrame(updateBubblePosition);
+        }
+
+        updateBubblePosition();
+    </script>
+</body>
+
+</html>

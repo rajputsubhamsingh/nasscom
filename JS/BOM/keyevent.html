@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key-Event</title>
+    <style>
+        #box{
+            width: 80px;
+            height: 2px;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <input type="text" id="myinput"> -->
+
+    <div id="box"></div>
+
+    <script>
+        // document.querySelector("#myinput").addEventListener('keydown', function (e) {
+        //     var text = e.key
+        //     console.log(text);
+        // })
+
+
+        var left = 0
+        var up = 0
+        document.querySelector("body").addEventListener('keydown', function (e) {
+            switch (e.key) {
+                case "ArrowRight":
+                    left = left + 5
+                    break;
+                case "ArrowLeft":
+                    left = left - 5
+                    break;
+                case "ArrowDown":
+                    up = up + 5
+                    break;
+                case "ArrowUp":
+                    up = up - 5
+                    break;
+                default:
+                    console.log("Other Key pressed");
+                    break;
+            }
+
+            console.log(left);
+            console.log(up);
+
+            document.getElementById('box').style.margin = `${up}px ${left}px`
+            
+        })
+    </script>
+</body>
+
+</html>
