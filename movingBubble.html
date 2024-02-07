@@ -11,6 +11,9 @@
             height: 300px;
             border-radius: 50%;
             border: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #bubble {
@@ -20,19 +23,20 @@
             background-color: #3498db;
             border-radius: 50%;
         }
-        #circle1 {
-            position: relative;
+
+        #box {
+            position: absolute;
             width: 200px;
             height: 200px;
+            border: 2px solid;
             border-radius: 50%;
-            border: 2px solid #000;
         }
 
         #bubble1 {
             position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: #3498db;
+            width: 15px;
+            height: 15px;
+            background-color: #0d649e;
             border-radius: 50%;
         }
     </style>
@@ -42,21 +46,17 @@
 <body>
     <div id="circle">
         <div id="bubble"></div>
-        <div id="circle1">
+        <div id="box">
             <div id="bubble1"></div>
         </div>
     </div>
-    
+
 
     <script>
         const circle = document.getElementById('circle');
         const bubble = document.getElementById('bubble');
         const radius = 150; // Adjust the radius as needed
         const speed = 0.02; // Adjust the speed as needed
-
-
-        const circle1 = document.getElementById('circle1');
-        const bubble1 = document.getElementById('bubble1');
 
         let angle = 0;
 
@@ -67,16 +67,36 @@
             bubble.style.left = (circle.offsetWidth / 2 + x - bubble.offsetWidth / 2) + 'px';
             bubble.style.top = (circle.offsetHeight / 2 + y - bubble.offsetHeight / 2) + 'px';
 
-            bubble1.style.left = (circle1.offsetWidth / 2 + x - bubble1.offsetWidth / 2) + 'px';
-            bubble1.style.top = (circle1.offsetHeight / 2 + y - bubble1.offsetHeight / 2) + 'px';
-
-
             angle += speed;
 
             requestAnimationFrame(updateBubblePosition);
         }
 
         updateBubblePosition();
+
+
+
+
+        const circle1 = document.getElementById('box');
+        const bubble1 = document.getElementById('bubble1');
+        const radius1 = 100; // Adjust the radius as needed
+        const speed1 = 0.5; // Adjust the speed as needed
+
+        let angle1 = 12;
+
+        function updateBubblePosition1() {
+            const x = Math.cos(angle1) * radius1;
+            const y = Math.sin(angle1) * radius1;
+
+            bubble1.style.left = (circle1.offsetWidth / 2 + x - bubble1.offsetWidth / 2) + 'px';
+            bubble1.style.top = (circle1.offsetHeight / 2 + y - bubble1.offsetHeight / 2) + 'px';
+
+            angle1 += speed;
+
+            requestAnimationFrame(updateBubblePosition1);
+        }
+
+        updateBubblePosition1();
     </script>
 </body>
 
