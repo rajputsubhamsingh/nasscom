@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literals</title>
+</head>
+
+<body>
+    <script>
+        // let name = "shubham singh";
+        // var obj = {
+        //     name : name
+        // }
+        // var obj = {
+        //     name
+        // }
+        // console.log(obj);
+
+        // let name = "shubham singh";
+        // let course = "B.Tech";
+        // var obj = {
+        //     name, 
+        //     course,
+        // }
+        // console.log(obj);
+
+
+        // object literals ke andar variable ko property ke tarah use karenge  
+
+        let n = "student"
+
+        var obj = {
+            [n + "name"]: "shubham",
+            course: "B.tech",
+            // detail : function() {
+            //     return `${this.studentname} is student of ${this.course}.`
+            // }
+            detail() {
+                return `${this.studentname} is student of ${this.course}.`
+            }
+        }
+
+        console.log(obj);
+        console.log(obj.detail());
+    </script>
+</body>
+
+</html>
