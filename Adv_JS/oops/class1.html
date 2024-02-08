@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Object</title>
+</head>
+<body>
+    <script>
+        // class Student {
+        //     constructor(){
+        //         console.log('constructor function');
+        //     }
+        //     hello() {
+        //         console.log("hello class");
+        //     }
+        // }
+        
+        // let a = new Student();
+        // // console.log(a);
+        // // a.hello()
+
+
+
+        // class Student {
+        //     constructor(name, age){
+        //         this.studname = name;
+        //         this.studage = age;
+        //         console.log('constructor function');
+        //     }
+        //     hello() {
+        //         console.log(`Hello ${this.studname} your age is ${this.studage}`);
+        //     }
+        //     static staticMethod(){
+        //         console.log("static method");
+        //     }
+        // }
+        
+        // let a = new Student("shubham", 22);
+        // // console.log(a);
+        // a.hello()
+        // // a.staticMethod()  // thorw type error because this is static method
+
+        // Student.staticMethod()
+        
+
+
+        // prototype methods ke dusre trike se kaise bana skte ho 
+        
+        class Student{}
+        Student.prototype.hello = function(){
+            console.log("Hello i am here.");
+        }
+        let a = new Student()
+        a.hello()
+
+    </script>
+</body>
+</html>

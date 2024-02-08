@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <script>
+        // class Employee {
+        //     constructor(name){
+        //         console.log(`Constructor : Employee ${name}`);
+        //     }
+        // }
+
+        // class Manager extends Employee {
+        //     constructor(name){
+        //         // super(name);
+        //         super(name);
+        //         console.log(`Constructor : Manager ${name}`);
+        //     }
+        // }
+        // // let a = new Employee('shubham')
+        // let b = new Manager("shubham");
+
+
+// -------------------------------------------------------------
+
+
+        // class Employee {
+        //     constructor(name){
+        //         this.empname = name;
+        //         console.log(`Constructor : Employee`);
+        //     }
+
+        //     info(){
+        //         console.log(`Employee Name : ${this.empname}`);
+        //     }
+        // }
+
+        // class Manager extends Employee {
+        //     info(){
+        //         super.info();
+        //         console.log(`Manager Name : ${this.empname}`);
+        //     }
+        // } 
+        // let a = new Manager("shubham")
+        // a.info()
+
+
+    // --------------------------------------------------------------------------------
+
+    class Employee {
+        constructor(name, age, salary) {
+            this.name = name;
+            this.age = age;
+            this.salary = salary;
+            console.log(`Constructor : Employee`);
+        }
+
+        info() {
+            document.write(`<h3>Employee Class Details</h3>
+            Name : ${this.name} <br>
+            Age : ${this.age} <br>
+            Salary : ${this.salary} <br>
+            `)
+        }
+    }
+
+    class Manager extends Employee {
+        info() {
+            super.info();
+            console.log(`Manager Name : ${this.name}`);
+        }
+    }
+    let a = new Manager("shubham", 22, 100000)
+    a.info()
+    </script>
+</body>
+</html>
