@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+    <script>
+        let promiseOne = new Promise((resolve, reject) => {
+            if (true) {
+                resolve("I am successfull.")
+            }
+            else {
+                reject("I am failed.")
+            }
+        });
+
+        let onfulfilment = (result) => {
+            console.log(result);
+        }
+
+        let onRejection = (error) => {
+            console.log(error);
+        }
+
+        promiseOne.then(onfulfilment)
+        .catch(onRejection);
+
+
+
+
+
+
+
+
+
+        // promiseOne.then(function(){
+        //     console.log("hello");
+        // }).catch(function(e) {
+        //     console.log("Error : " + e);
+        // })
+    </script>
+</body>
+
+</html>

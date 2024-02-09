@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+
+<body>
+    <script>
+        class Example {
+            constructor(carname, color, price, carmodel) {
+                this.carname = carname
+                this.color = color
+                this.price = price
+                this.carmodel = carmodel
+            }
+
+            carFeatures() {
+                console.log(`${this.carname} : color(${this.color}) = price : ${this.price}`);
+            }
+        }
+
+        class Mustang extends Example {
+            constructor(carname, color, price, carmodel) {
+                super(carname, color, price, carmodel)
+            }
+            mustangInfo(){
+                document.write(`<h1>${this.carname}</h1> 
+                <h1>Model : - ${this.carmodel}</h1>
+                <p>This car have 4X4 and also lots of features</p>`);
+            }
+        }
+
+        class Mustang2 extends Mustang {
+            mustangeInfo2(){
+                super.mustangInfo() 
+            }
+        }
+ 
+        let MustangCar = new Mustang('Mustang', 'gray and black', '$12', 'Q800A')
+        MustangCar.carFeatures()
+        MustangCar.mustangInfo()
+
+        let Mustang2car = new Mustang2('Mustang', 'gray and black', '$12', 'Q801D')
+        Mustang2car.mustangeInfo2()
+    </script>
+</body>
+
+</html>
