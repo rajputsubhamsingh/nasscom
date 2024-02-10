@@ -32,23 +32,85 @@
 
 
 
+        // chatgpt code for handling the api using promieses using xml request 
+        // function fetchDataFromAPI(url) {
+        //     return new Promise((resolve, reject) => {
+        //         const xhr = new XMLHttpRequest();
+
+        //         xhr.open('GET', url, true);
+        //         xhr.onload = function () {
+        //             if (xhr.status >= 200 && xhr.status < 300) {
+        //                 resolve(JSON.parse(xhr.responseText));
+        //             } else {
+        //                 reject(new Error(`Request failed with status ${xhr.status}`));
+        //             }
+        //         };
+
+        //         xhr.onerror = function () {
+        //             reject(new Error('Network request failed'));
+        //         };
+
+        //         xhr.send();
+        //     });
+        // }
+
+        // const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+        // fetchDataFromAPI(apiUrl)
+        //     .then(data => {
+        //         console.log('Data fetched successfully:', data);
+        //     })
+        //     .catch(error => {
+        //         console.error('Error fetching data:', error.message);
+        //     });
 
 
+        // practice the above code 
 
+        function fetchdataFromApi(url) {
+            return new Promise((resolve, reject) => {
 
+                let xhr = new XMLHttpRequest();
+                xhr.open('GET', url);
+                xhr.onload = function () {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        resolve(JSON.parse(xhr.responseText));
+                    }
+                    else {
+                        reject("Something went wrong request status : " + xhr.status);
+                    }
+                }
+                xhr.send();
 
+            });
+        }
 
+        const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+        // fetchdataFromApi(apiUrl)
+        //     .then((result) => {
+        //         console.log(result);
+        //         let name = result.map(result => result.name);
+        //         return name;
+        //     })
+        //     .then((name) => {
+        //         console.log(name);
+        //     })
+        //     .catch((err) => {
+        //         console.log(err);
+        //     });
 
-
-
-
-
-
-
-
-
-    
-
+        // handle multiple subdata from result 
+        fetchdataFromApi(apiUrl)
+            .then((result) => {
+                console.log(result);
+                let data = result.map(result => ({ name: result.name, email: result.email }));
+                return data;
+            })
+            .then((name) => {
+                console.log(name);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     </script>
 </body>
 
