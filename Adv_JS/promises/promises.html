@@ -102,11 +102,11 @@
         fetchdataFromApi(apiUrl)
             .then((result) => {
                 console.log(result);
-                let data = result.map(result => ({ name: result.name, email: result.email }));
+                let data = result.map(result => ({ id : result.id, name: result.name, email: result.email }));
                 return data;
             })
-            .then((name) => {
-                console.log(name);
+            .then((data) => {
+                console.log(data);
             })
             .catch((err) => {
                 console.log(err);
