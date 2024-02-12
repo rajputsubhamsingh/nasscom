@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Promises</title>
+</head>
+
+<body>
+    <h1>Javascript - Promises</h1>
+    <h2>Promise Result : <span></span></h2>
+
+    <script>
+        // let complete = true;
+        // let prom = new Promise((resolve, reject) => {
+        //     if (complete) {
+        //         resolve("I am successfull.");
+        //     }
+        //     else {
+        //         reject("I am failed.");
+        //     }
+        // });
+        // console.log(prom);
+
+
+
+        // function prom(complete) {
+        //     return new Promise((resolve, reject) => {
+        //         if (complete) {
+        //             resolve("I am successfull.");
+        //         }
+        //         else {
+        //             reject("I am failed.");
+        //         }
+        //     }); 
+        // }
+
+        // console.log(prom(true));
+
+
+
+        // function prom(complete) {
+        //     return new Promise((resolve, reject) => {
+        //         if (complete) {
+        //             resolve("I am successfull.");
+        //         }
+        //         else {
+        //             reject("I am failed.");
+        //         }
+        //     });
+        // }
+
+        // let onfulfilment = (result) => {
+        //     console.log(result);
+        // }
+        // let onRejection = (err) => {
+        //     console.log(err);
+        // }
+
+        // prom(true).then(onfulfilment).catch(onRejection);
+
+
+
+        // function prom(complete) {
+        //     return new Promise((resolve, reject) => {
+        //         console.log('Fetching data - please wait');
+        //         setTimeout(() => {
+        //             if (complete) {
+        //                 resolve("I am successfull.");
+        //             }
+        //             else {
+        //                 reject("I am failed.");
+        //             }
+        //         }, 5000);
+        //     });
+        // }
+        // // console.log(prom(true));
+        // let onfulfilment = (result) => {
+        //     document.querySelector('span').innerHTML = result;
+        //     console.log(result);
+        // }
+        // let onRejection = (err) => {
+        //     document.querySelector('span').innerHTML = err;
+        //     console.log(err);
+        // }
+
+        // prom(false).then(onfulfilment).catch(onRejection);
+
+
+
+        function prom(a, b) {
+            return new Promise((resolve, reject) => {
+                console.log('Fetching data - please wait');
+                let c = a / b;
+                setTimeout(() => {
+                    if (c) {
+                        resolve(`Calculation : ${c}.`);
+                    }
+                    else {
+                        reject("Failed to calculate.");
+                    }
+                }, 2000);
+            });
+        }
+
+        // prom(5, 2).then((result) => {
+        //     document.querySelector('span').innerHTML = result;
+        //     console.log(result);
+        // }).catch((err) => {
+        //     document.querySelector('span').innerHTML = err;
+        //     console.log(err);
+        // });
+
+        prom(0, 3).then((result) => {
+            document.querySelector('span').innerHTML = result;
+            console.log(result);
+        }).catch((err) => {
+            document.querySelector('span').innerHTML = err;
+            console.log(err);
+        });
+
+
+    </script>
+</body>
+
+</html>
