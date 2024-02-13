@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Promises</title>
+</head>
+
+<body>
+    <script>
+        function employee(salary, exp) {
+            if (exp <= 2) {
+                let bonus = (salary * 2) / 100;   // 2% bonus
+                let total = salary + bonus;
+                return new Promise((resolve, reject) => {
+                    try {
+                        resolve({ salary: `${salary}`, Bonus: `${bonus}`, Total: `${total}` });
+                    } catch (err) {
+                        reject(err)
+                    }
+                });
+            }
+            else {
+                let bonus = (salary * 5) / 100;   // 5% bonus
+                let total = salary + bonus;
+                return new Promise((resolve, reject) => {
+                    try {
+                        resolve({ Salary: `${salary}`, Bonus: `${bonus}`, Total: `${total}` });
+                    } catch (err) {
+                        reject(err)
+                    }
+                });
+            }
+        }
+
+        employee(10000, 5)
+            .then((result) => {
+                console.log(result);
+                for (const i in result) {
+                    console.log(`${i} : ${result[i]}`);
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    </script>
+</body>
+
+</html>
